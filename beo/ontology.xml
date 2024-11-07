@@ -1,0 +1,1575 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="https://pi.pauwel.be/voc/buildingelement"
+         xmlns="https://pi.pauwel.be/voc/buildingelement#"
+         xmlns:x_0.1="http://xmlns.com/foaf/0.1/"
+         xmlns:term="http://purl.org/dc/terms/"
+         xmlns:vann="http://purl.org/vocab/vann/"
+         xmlns:x_1.1="http://purl.org/dc/elements/1.1/">
+
+<owl:Ontology rdf:about="https://pi.pauwel.be/voc/buildingelement">
+  <term:creator>
+    <x_0.1:Person>
+      <x_0.1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pieter Pauwels</x_0.1:name>
+    </x_0.1:Person>
+  </term:creator>
+  <term:license rdf:resource="https://creativecommons.org/licenses/by/1.0"/>
+  <vann:preferredNamespaceUri rdf:resource="#"/>
+  <x_1.1:Language rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</x_1.1:Language>
+  <x_1.1:description xml:lang="en">The Building Element Ontology provides an ontology based on the IfcBuildingElement subtree in the IFC specification, containing a taxonomy of classes that allow to define common building elements.</x_1.1:description>
+  <x_1.1:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#string">December 27th 2018</x_1.1:modified>
+  <x_1.1:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Building Element Ontology</x_1.1:title>
+  <term:description xml:lang="en">The Building Element Ontology provides an ontology based on the IfcBuildingElement subtree in the IFC specification, containing a taxonomy of classes that allow to define common building elements.</term:description>
+  <term:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-12-27</term:issued>
+  <term:title xml:lang="en">Building Element Ontology</term:title>
+  <vann:preferredNamespacePrefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">beo</vann:preferredNamespacePrefix>
+  <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">December 27th 2018</owl:versionInfo>
+  <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v0.1.0</owl:versionInfo>
+</owl:Ontology>
+
+<owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/name"/>
+
+<owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+
+<owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+
+<owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+
+<owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/Language"/>
+
+<owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+
+<owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/modified"/>
+
+<owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+
+<owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+
+<owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+
+<owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+
+<owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+
+<owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+
+<owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+
+<owl:AnnotationProperty rdf:about="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+
+<owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Beam">
+  <rdfs:subClassOf rdf:resource="#BuildingElement"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcBeam"/>
+  <rdfs:comment xml:lang="en">A horizontal, or nearly horizontal, structural member that is capable of withstanding load primarily by resisting bending. It represents such a member from an architectural point of view. It is not required to be load bearing.</rdfs:comment>
+  <rdfs:comment xml:lang="nb-no">A standard beam usually used horizontally.</rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/3zXEi0qSCHuO00025QrE$V</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beam</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#BuildingElement">
+  <rdfs:subClassOf rdf:resource="http://purl.org/goodrelations/v1#SomeItems"/>
+  <rdfs:subClassOf rdf:resource="https://schema.org/Product"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcBuildingElement"/>
+  <rdfs:comment xml:lang="de-de">Bauelement</rdfs:comment>
+  <rdfs:comment xml:lang="en">Comprises all elements that are primarily part of the construction of a building, i.e., its structural and space separating system. Building elements are all physically existent and tangible things.</rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/2AFYKXkEn7RxYuvbduGfUV</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Building Element</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Beam-BEAM">
+  <rdfs:subClassOf rdf:resource="#Beam"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcBeamEnumType"/>
+  <rdfs:comment xml:lang="en">A horizontal, or nearly horizontal, structural member that is capable of withstanding load primarily by resisting bending. It represents such a member from an architectural point of view. It is not required to be load bearing.</rdfs:comment>
+  <rdfs:comment xml:lang="nb-no">A standard beam usually used horizontally.</rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/0KKIHMGYH7H8MAfgxbrxuV</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beam</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Beam-HOLLOWCORE">
+  <rdfs:subClassOf rdf:resource="#Beam"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcBeamEnumType"/>
+  <rdfs:comment xml:lang="de-de">Platte mit rechteckigem Querschnitt, in der auf voller Länge in Längsrichtung kreisrunde oder ovale Hohlräume (Aussparungen) verlaufen</rdfs:comment>
+  <rdfs:comment xml:lang="fr-fr">dalle de section rectangulaire comportant des vides longitudinaux sur toute leur longueur ou des vides de forme ovale</rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/2gzZKHqELB$gPVKajRAFXc</rdfs:comment>
+  <rdfs:comment xml:lang="es-es">losa de sección rectangular con huecos circulares o óvales para toda su longitud</rdfs:comment>
+  <rdfs:comment xml:lang="en">monolithic prestressed or reinforced elements with a constant overall depth divided into an upper and lower flange, linked by vertical webs, so constituting cores as longitudinal voids the cross section of which is constant and presents one vertical axis.</rdfs:comment>
+  <rdfs:comment xml:lang="pl-pl">prostokątna płyta z okrągłymi lub owalnymi przestrzeniami na całej długości</rdfs:comment>
+  <rdfs:comment xml:lang="en-gb">rectangular section slab with full-length longitudinal circular or oval shaped voids</rdfs:comment>
+  <rdfs:comment xml:lang="en">rectangular section slab with full-length longitudinal circular or oval shaped voids.</rdfs:comment>
+  <rdfs:comment xml:lang="sv-se">rektangulärt bjälklag med längsgående cirkelformade eller ovalformade tomrum längs med hela bjälklaget</rdfs:comment>
+  <rdfs:comment xml:lang="dk-dk">rektangulært element med hulrum i fuld længde i langsgående, cirkulær eller oval form</rdfs:comment>
+  <rdfs:comment xml:lang="nb-no">rektangulært element med langsgående sirkulære eller ovale hulrom i full lengde</rdfs:comment>
+  <rdfs:comment xml:lang="fi-fi">suorakaiteenmuotoinen laattaelementti, jossa on koko pituudeltaan pyöreitä tai ovaalinmuotoisia onteloita/tyhjätiloja</rdfs:comment>
+  <rdfs:comment xml:lang="bg-bg">плоча с правоъгълно сечение и кухини по цялата дължина с надлъжна кръгла или овална форма </rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pre-cast Hollow Core Slab</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Beam-JOIST">
+  <rdfs:subClassOf rdf:resource="#Beam"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcBeamEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/1_zkjNhS95oA5oDSSTnEvO</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joiste</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Beam-LINTEL">
+  <rdfs:subClassOf rdf:resource="#Beam"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcBeamEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/1PivEYC0575QGoaAFjN8c9</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lintel</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Beam-SPANDREL">
+  <rdfs:subClassOf rdf:resource="#Beam"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcBeamEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/2$vr6UW$f3SwHilnemEZoH</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spandrel</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Beam-T_BEAM">
+  <rdfs:subClassOf rdf:resource="#Beam"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcBeamEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/1o9Up6wBr339DlpjWIWE$l</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">T_Beam</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="http://purl.org/goodrelations/v1#SomeItems">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="https://schema.org/Product">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#BuildingElementPart">
+  <rdfs:subClassOf rdf:resource="#ElementComponent"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcBuildingElementPart"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/3v2S1DH0r50BHIhWE6QHMZ</rdfs:comment>
+  <rdfs:comment xml:lang="en">ifcbuildingelementpart represents major components as subordinate parts of a building element. typical usage examples include precast concrete sandwich walls, where the layers may have different geometry representations. in this case the layered material representation does not sufficiently describe the element. each layer is represented by an own instance of the ifcbuildingelementpart with its own geometry description. the kind of building element part is further specified by a corresponding instance of ifcbuildingelementparttype, referred to by ifcreldefinesbytype.</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Building Element Part</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#ElementComponent">
+  <rdfs:subClassOf rdf:resource="https://schema.org/Product"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcElementComponent"/>
+  <rdfs:comment xml:lang="en">A representation for minor items included in, added to or connecting to or between elements, which usually are not of interest from the overall building structure viewpoint. However, these small parts may have vital and load carrying functions within the construction. These items do not provide any actual space boundaries. Typical examples include different kinds of fasteners and various accessories.</rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/2pKpW0qSeHuO00025QrE$V</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Element Component</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#BuildingElementPart-INSULATION">
+  <rdfs:subClassOf rdf:resource="#BuildingElementPart"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcBuildingElementPartEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/2CF$o8Mgv2_xbw_kioa_YW</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Insulation</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#BuildingElementPart-PRECASTPANEL">
+  <rdfs:subClassOf rdf:resource="#BuildingElementPart"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcBuildingElementPartEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/0pt2K5QIXB89suCXlsQZw$</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Precast Panel</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Chimney">
+  <rdfs:subClassOf rdf:resource="#BuildingElement"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcChimney"/>
+  <rdfs:comment xml:lang="en">A vertical structure of brick, masonry, or steel that carries exhaust gases or steam away from a fire, engine, etc.</rdfs:comment>
+  <rdfs:comment xml:lang="en">Typically vertical, or as near as vertical, parts of the construction of a building and part of the building fabric. Often constructed by pre-cast or insitu concrete, today seldom by bricks.</rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/0xE4A0qSaHuO00025QrE$V</rdfs:comment>
+  <rdfs:comment xml:lang="nb-no">konstruksjon bestående av én eller flere vegger som omslutter én eller flere røykkanaler</rdfs:comment>
+  <rdfs:comment xml:lang="en">structure consisting of a wall or walls enclosing  a flue or flues</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chimney</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Column">
+  <rdfs:subClassOf rdf:resource="#BuildingElement"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcColumn"/>
+  <rdfs:comment xml:lang="en">A vertical structural member which often is aligned with a structural grid intersection. It represents a vertical, or nearly vertical, structural member that transmits, through compression, the weight of the structure above to other structural elements below. It represents such a member from an architectural point of view. It is not required to be load bearing.</rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/1CDOE0qSeHuO00025QrE$V</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Column</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Column-COLUMN">
+  <rdfs:subClassOf rdf:resource="#Column"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcColumnEnumType"/>
+  <rdfs:comment xml:lang="en">A vertical structural member which often is aligned with a structural grid intersection. It represents a vertical, or nearly vertical, structural member that transmits, through compression, the weight of the structure above to other structural elements below. It represents such a member from an architectural point of view. It is not required to be load bearing.</rdfs:comment>
+  <rdfs:comment xml:lang="nb-no">Søyle</rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/1k5QL8XejA8v7H3XePklst</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Column</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Column-PILASTER">
+  <rdfs:subClassOf rdf:resource="#Column"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcColumnEnumType"/>
+  <rdfs:comment xml:lang="nb-no">Pilaster</rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/08F4W56in3zeQ$ucplQrmF</rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/312dw0BS8Htm00025QrE$V</rdfs:comment>
+  <rdfs:comment xml:lang="nb-no">vertikalt fremspring på vegg</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pilaster</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Covering">
+  <rdfs:subClassOf rdf:resource="#BuildingElement"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcCovering"/>
+  <rdfs:comment xml:lang="en">An element which covers some part of another element and is fully dependent on that other element.</rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/3uBPs0qSyHuO00025QrE$V</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Covering</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Covering-CEILING">
+  <rdfs:subClassOf rdf:resource="#Covering"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcCoveringEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/05pSAVKa99GQlGChUhmlv1</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ceiling</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Covering-CLADDING">
+  <rdfs:subClassOf rdf:resource="#Covering"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcCoveringEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/0MKWgDXdn9OfqhAzFzvTUH</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cladding</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Covering-FLOORING">
+  <rdfs:subClassOf rdf:resource="#Covering"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcCoveringEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/1MZNPRnDz1jOV_XCmntitl</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Flooring</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Covering-INSULATION">
+  <rdfs:subClassOf rdf:resource="#Covering"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcCoveringEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/0m_WyU8An7RAFjJPRPQn1j</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Insulation</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Covering-MEMBRANE">
+  <rdfs:subClassOf rdf:resource="#Covering"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcCoveringEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/3vHSkCoT0Hsm00051Mm008</rdfs:comment>
+  <rdfs:comment xml:lang="nb-no">vanntett og/eller damptett lag som er festet til sluket i gulvet, på gulvet eller på taket</rdfs:comment>
+  <rdfs:comment xml:lang="en">watertight and/or damp proof layer attached to the gully either in the floor or on the floor or
+roof</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Membrane</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Covering-MOLDING">
+  <rdfs:subClassOf rdf:resource="#Covering"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcCoveringEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/0rO5hENaL0Sx5ncSZm5QWi</rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/39P8INeF1DvPcZnWFCA0jO</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Molding</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Covering-ROOFING">
+  <rdfs:subClassOf rdf:resource="#Covering"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcCoveringEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/1roIuYcU5AxfQM_Wf18q7t</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Roofing</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Covering-SKIRTINGBOARD">
+  <rdfs:subClassOf rdf:resource="#Covering"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcCoveringEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/0rhD2N_cvFRRnqQ6pRM9aE</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Skirting Board</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Covering-SLEEVING">
+  <rdfs:subClassOf rdf:resource="#Covering"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcCoveringEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/2mox_rbmb43xWuIkQmJqW1</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sleeving</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Covering-WRAPPING">
+  <rdfs:subClassOf rdf:resource="#Covering"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcCoveringEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/16XES3__TAdwQ57Ox4T_V8</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wrapping</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#CurtainWall">
+  <rdfs:subClassOf rdf:resource="#BuildingElement"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcCurtainWall"/>
+  <rdfs:comment xml:lang="en">An exterior wall of a building which is an assembly of components, hung from the edge of the floor/roof structure rather than bearing on a floor. </rdfs:comment>
+  <rdfs:comment xml:lang="de-de">Vertikale und horizontale Bauteile, die untereinander verbunden und mit dem Tragwerk des Gebäudes verankert sind sowie gefüllt sind, um eine raumabschließende, durchgehende Außenschicht zu bilden, die alleine oder gemeinsam mit der übrigen Baukonstruktion, alle normalen Funktionen einer Außenwand bietet, jedoch keine lastabtragenden Funktionen erfüllt</rdfs:comment>
+  <rdfs:comment xml:lang="it-it">elementi strutturali verticali e orizzontali, collegati assieme e ancorati alla struttura di supporto dell'edificio e tamponati, a formare una pelle di chiusura continua che fornisce, da sola o in congiunzione con la costruzione, tutte le normali funzioni di un muro esterno, ma non assume nessuna delle caratteristiche portanti della struttura dell'edificio</rdfs:comment>
+  <rdfs:comment xml:lang="es-es">elementos estructurales verticales y horizontales, conectados entre sí y anclados a la estructura portante del edificio y rellenados, para formar un conjunto de piel continua que proporciona, por sí mismo o conjuntamente con la construcción del edificio, todas las funciones normales de una pared externa, pero no se hace cargo de ninguna de las características portantes de la estructura del edificio</rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/1nBFK0qT0HuO00025QrE$V</rdfs:comment>
+  <rdfs:comment xml:lang="fr-fr">les éléments de structure verticaux et horizontaux reliés ensemble et ancrés sur la structure portante du bâtiment et remplis pour former un espace renfermant une peau continue qui fournit, par elle-même ou en combinaison avec la construction du bâtiment, toutes les fonctions normales d'un mur extérieur, mais n'emprunte aucune des caractéristiques de résistance à la charge de la structure du bâtiment</rdfs:comment>
+  <rdfs:comment xml:lang="dk-dk">lodrette og vandrette bygningselementer, der er bundet sammen og forankret til bygningens bærende konstruktion og fyldt, så de danner en fortløbende inddækning, der i sig selv eller sammen med bygningskonstruktionen leverer alle en ydermurs normale funktioner, men som ikke påtager sig nogen af bygningskonstruktionens bærende egenskaber</rdfs:comment>
+  <rdfs:comment xml:lang="pl-pl">pionowe i poziome elementy konstrukcyjne, połączone ze sobą i zakotwiczone w konstrukcji nośnej budynku i w zabudowie typu plomba, tworzące przestrzeń obejmującą ciągłą warstwę, która zapewnia, samodzielnie lub w połączeniu z konstrukcją budynku, wszystkie normalne funkcje ściany zewnętrznej, ale nie spełnia żadnej funkcji nośnej dla konstrukcji budynku</rdfs:comment>
+  <rdfs:comment xml:lang="fi-fi">pysty- ja vaakasuuntaisia rakenneosia, toisiinsa liitettyinä ja rakennuksen kantavaan rakenteeseen kiinnitettynä, täydennettynä muodostamaan suojaavan yhtenäisen pintatilan, jolla on sellaisenaan tai yhdessä rakennuksen kanssa kaikki ulkoisen seinän normaalit toimintaominaisuudet, mutta jota ei käytetä kantavana rakenteena</rdfs:comment>
+  <rdfs:comment xml:lang="nb-no">utvendig, ikkebærende veggkonstruksjon forankret til bygningens hovedbærekonstruksjon. påhengsvegger bygges vanligvis av et rammeverk av metall, tre eller PVC med vertikale og horisontale komponenter som overfører påhengsveggens egenvekt og eventuelle vindkrefter til bygningens bærekonstruksjon</rdfs:comment>
+  <rdfs:comment xml:lang="en">vertical and horizontal structural members, connected together and anchored to the supporting structure of the building and infilled, to form a space enclosing continuous skin, which provides, by itself or in conjunction with the building construction, all the normal functions of an external wall, but does not take on any of the load bearing characteristics of the building structure</rdfs:comment>
+  <rdfs:comment xml:lang="sv-se">vertikala och horisontella byggnadsdelar som har sammanfogats och förankrats vid byggnadens stödkonstruktion och isolerats, för att skapa en inhägnad med kontinuerlig yta som, av sig själv eller tillsammans med byggnadskonstruktionen, erbjuder alla funktioner som en yttervägg vanligtvis har, men som inte har några av byggnadskonstruktionens bärande egenskaper</rdfs:comment>
+  <rdfs:comment xml:lang="bg-bg">вертикални и хоризонтални конструктивни елементи, свързани помежду си, закрепени към основната конструкция на сградата и запълнени, за да образуват непрекъсната ограждаща пространството обвивка, която осигурява, самостоятелно или съвместно с конструкцията на сградата, всички изисквани функции към една външна стена, но без да изпълнява никакви функции свързани с носимоспособността на сградната конструкция</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Curtain Wall</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#DiscreteAccessory">
+  <rdfs:subClassOf rdf:resource="#ElementComponent"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcDiscreteAccessory"/>
+  <rdfs:comment xml:lang="en">A representation of different kinds of accessories included in or added to elements.</rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/0W7W20qT8HuO00025QrE$V</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Discrete Accessory</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#DiscreteAccessory-ANCHORPLATE">
+  <rdfs:subClassOf rdf:resource="#DiscreteAccessory"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcDiscreteAccessoryEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/1XD5ysVrvF$haI5OgtznWi</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anchor Plate</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#DiscreteAccessory-BRACKET">
+  <rdfs:subClassOf rdf:resource="#DiscreteAccessory"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcDiscreteAccessoryEnumType"/>
+  <rdfs:comment xml:lang="en">An artefact which is projecting from the side of a wall or other structure intended to support some other artefacts.        </rdfs:comment>
+  <rdfs:comment xml:lang="nb-no">Brakkett for utstyr</rdfs:comment>
+  <rdfs:comment xml:lang="nb-no">Innstøpningsbrakett</rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/3EGCgYGC9F3PmaQ821Ax2u</rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/3vHPwWoT0Hsm00051Mm008</rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/3vHcVCoT0Hsm00051Mm008</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bracket</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#DiscreteAccessory-SHOE">
+  <rdfs:subClassOf rdf:resource="#DiscreteAccessory"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcDiscreteAccessoryEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/1i44itooP5F9e53Jc$HR0o</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shoe</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Door">
+  <rdfs:subClassOf rdf:resource="#BuildingElement"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcDoor"/>
+  <rdfs:comment xml:lang="nb-no">Bygningsdel som dekker en åpning i utvendig eller innvendig vegg, og som kan åpnes eller stenges for passasje.</rdfs:comment>
+  <rdfs:comment xml:lang="nb-no">En åpning i en barriære med et dørblad som kan lukke åpningen og en ramme som holder dørbladet.</rdfs:comment>
+  <rdfs:comment xml:lang="en">a complete unit consisting of a door frame and a door leaf or leaves, supplied with the essential hardware and wheatherseal, as a product from a single source</rdfs:comment>
+  <rdfs:comment xml:lang="en">construction for closing an opening intended primarily for access or egress or both. Typically consisting of a panel that swings on hinges or that slides or rotates</rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/3vHRQ8oT0Hsm00051Mm008</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Door</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Door-DOOR">
+  <rdfs:subClassOf rdf:resource="#Door"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcDoorEnumType"/>
+  <rdfs:comment xml:lang="en">A standard door usually within a wall opening, as a door panel in a curtain wall, or as a "free standing" door.</rdfs:comment>
+  <rdfs:comment xml:lang="nb-no">Bygningsdel som dekker en åpning i utvendig eller innvendig vegg, og som kan åpnes eller stenges for passasje.</rdfs:comment>
+  <rdfs:comment xml:lang="nb-no">En åpning i en barriære med et dørblad som kan lukke åpningen og en ramme som holder dørbladet.</rdfs:comment>
+  <rdfs:comment xml:lang="en">a complete unit consisting of a door frame and a door leaf or leaves, supplied with the essential hardware and wheatherseal, as a product from a single source</rdfs:comment>
+  <rdfs:comment xml:lang="en">construction for closing an opening intended primarily for access or egress or both. Typically consisting of a panel that swings on hinges or that slides or rotates</rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/2reX7MzyDDPP8OCoYtmU7d</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Door</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Door-GATE">
+  <rdfs:subClassOf rdf:resource="#Door"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcDoorEnumType"/>
+  <rdfs:comment xml:lang="nb-no">Det engelske ordet 'gate' og det franske ordet 'portail' refererer til produkter utenfor bygninger, for eksempel i innhegninger, gjerder osv.
+Det tyske ordet 'Tor' refererer til alle produkter for å stenge åpninger, som tillater passering av kjøretøyer.</rdfs:comment>
+  <rdfs:comment xml:lang="en">a movable barrier, usually on hinges, closing an opening in a fence, wall, or other enclosure</rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/3C6qVkdNfEGOKvZBfksYwB</rdfs:comment>
+  <rdfs:comment xml:lang="nb-no">innretning for å lukke en åpning som er beregnet for passering av kjøretøyer og personer</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gate</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Door-TRAPDOOR">
+  <rdfs:subClassOf rdf:resource="#Door"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcDoorEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/3_T7f4cxzB_ur2vAtd6pJe</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Roof Hatch</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Fastener">
+  <rdfs:subClassOf rdf:resource="#ElementComponent"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcFastener"/>
+  <rdfs:comment xml:lang="en">Jointing component that is used to operate a door, window, shutter, gate or drawer .</rdfs:comment>
+  <rdfs:comment xml:lang="en">Representations of fixing parts which are used as fasteners to connect or join elements with other elements. </rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/2$v8e0qUGHuO00025QrE$V</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fastener</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Fastener-GLUE">
+  <rdfs:subClassOf rdf:resource="#Fastener"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcFastenerEnumType"/>
+  <rdfs:comment xml:lang="sv-se">bindemedel eller bindemedelslösning för hopfogning av fasta material</rdfs:comment>
+  <rdfs:comment xml:lang="en">binder or binder solution for joining solid materials</rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/097NQ9z4T7eOn7nJCQC0yI</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glue</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Fastener-MORTAR">
+  <rdfs:subClassOf rdf:resource="#Fastener"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcFastenerEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/0dS2xSsC1BbvRjM1MIjNn5</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mortar</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Fastener-WELD">
+  <rdfs:subClassOf rdf:resource="#Fastener"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcFastenerEnumType"/>
+  <rdfs:comment xml:lang="en">a weld seam between parts of metallic material or other suitable materials</rdfs:comment>
+  <rdfs:comment xml:lang="en-gb">a weld seam between parts of metallic material or other suitable materials</rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/01DZw_Z2b4CwKEwBQ9ERPZ</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Weld</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Footing">
+  <rdfs:subClassOf rdf:resource="#BuildingElement"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcFooting"/>
+  <rdfs:comment xml:lang="en">A part of the foundation of a structure that spreads and transmits the load to the soil. Also characterized as shallow foundation, where the loads are transferred to the ground near the surface.</rdfs:comment>
+  <rdfs:comment xml:lang="de-de">Flachgründung</rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/2vyAW0qUWHuO00025QrE$V</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Footing</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Footing-CAISSON_FOUNDATION">
+  <rdfs:subClassOf rdf:resource="#Footing"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcFootingEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/0MGkpmTGDFC80qy7qA0W2w</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Caisson Foundation</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Footing-FOOTING_BEAM">
+  <rdfs:subClassOf rdf:resource="#Footing"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcFootingEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/3hRbiifMvFOgC3tEfSPD8X</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Footing Beam</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Footing-PAD_FOOTING">
+  <rdfs:subClassOf rdf:resource="#Footing"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcFootingEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/1XJ0TK6AbBfxMCQLLkdnDr</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pad Footing</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Footing-PILE_CAP">
+  <rdfs:subClassOf rdf:resource="#Footing"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcFootingEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/3$LxhKMZjFuBdi75OQXj0L</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pile Cap</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Footing-STRIP_FOOTING">
+  <rdfs:subClassOf rdf:resource="#Footing"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcFootingEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/0mDEbMPpzB9B_vQTUHZLHe</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Strip Footing</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#MechanicalFastener">
+  <rdfs:subClassOf rdf:resource="#ElementComponent"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcMechanicalFastener"/>
+  <rdfs:comment xml:lang="en">A fastener connecting building elements mechanically. A single instance may represent one or many of actual mechanical fasteners, for example an array of bolts or a row of nails.</rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/2$KV20qV0HuO00025QrE$V</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mechanical Fastener</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#MechanicalFastener-ANCHORBOLT">
+  <rdfs:subClassOf rdf:resource="#MechanicalFastener"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcMechanicalFastenerEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/3NJqge3HD7du28Nje_S1Yv</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anchor Bolt</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#MechanicalFastener-BOLT">
+  <rdfs:subClassOf rdf:resource="#MechanicalFastener"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcMechanicalFastenerEnumType"/>
+  <rdfs:comment xml:lang="en">a threaded cylindrical rod that engages with a similarly threaded hole in a nut or any other part to form a fastener. the mechanical fastener often also includes one or more washers and one or more nuts.</rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/2yfVRHZ2X7heCLVLk0oVBK</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bolt</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#MechanicalFastener-DOWEL">
+  <rdfs:subClassOf rdf:resource="#MechanicalFastener"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcMechanicalFastenerEnumType"/>
+  <rdfs:comment xml:lang="nb-no">Dybel</rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/2jZSkKNyPBMwSeeMxlYWrc</rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/3vHOxEoT0Hsm00051Mm008</rdfs:comment>
+  <rdfs:comment xml:lang="en">rod protruding from the toe of the sheet pile, used for fixing sheet piles to the bed-rock</rdfs:comment>
+  <rdfs:comment xml:lang="nb-no">stag som stikker ut fra foten av spuntnålen, og som brukes for å feste spunten til fjell</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dowel</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#MechanicalFastener-NAIL">
+  <rdfs:subClassOf rdf:resource="#MechanicalFastener"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcMechanicalFastenerEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/1WICu7sp12cQ$$2QCHf$DB</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nail</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#MechanicalFastener-NAILPLATE">
+  <rdfs:subClassOf rdf:resource="#MechanicalFastener"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcMechanicalFastenerEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/26FDcCBjH3BOLZTZb29fxk</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nail Plate</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#MechanicalFastener-RIVET">
+  <rdfs:subClassOf rdf:resource="#MechanicalFastener"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcMechanicalFastenerEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/1zynxAt3H1eAVfmukRcO4R</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rivet</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#MechanicalFastener-SCREW">
+  <rdfs:subClassOf rdf:resource="#MechanicalFastener"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcMechanicalFastenerEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/2NLmoal3LAGxceh8SPCvI7</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Screw</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#MechanicalFastener-SHEARCONNECTOR">
+  <rdfs:subClassOf rdf:resource="#MechanicalFastener"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcMechanicalFastenerEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/0sHCCoroj0pesEpqdsmtRT</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shear Connector</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#MechanicalFastener-STAPLE">
+  <rdfs:subClassOf rdf:resource="#MechanicalFastener"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcMechanicalFastenerEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/3ugeBu3lP8WANu_d7DFAtv</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Staple</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#MechanicalFastener-STUDSHEARCONNECTOR">
+  <rdfs:subClassOf rdf:resource="#MechanicalFastener"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcMechanicalFastenerEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/2VmXuOwNvFIxXMT91lYI9q</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stud Shear Connector</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Member">
+  <rdfs:subClassOf rdf:resource="#BuildingElement"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcMember"/>
+  <rdfs:comment xml:lang="en">A structural member designed to carry loads between or beyond points of support. It is not required to be load bearing.  A linear architectural or structural element that cannot be expressed more specifically as either a beam or column.</rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/11GXc0qV4HuO00025QrE$V</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Member</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Member-BRACE">
+  <rdfs:subClassOf rdf:resource="#Member"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcMemberEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/0ccYVvWMX5jwoOSredVplR</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brace</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Member-CHORD">
+  <rdfs:subClassOf rdf:resource="#Member"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcMemberEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/1_qCPXQ3j1VBh_PCDSM2PC</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chord</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Member-COLLAR">
+  <rdfs:subClassOf rdf:resource="#Member"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcMemberEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/1r9F5o8Pv9mPKppdGc$YOw</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Collar</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Member-MEMBER">
+  <rdfs:subClassOf rdf:resource="#Member"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcMemberEnumType"/>
+  <rdfs:comment xml:lang="en">A structural member designed to carry loads between or beyond points of support. It is not required to be load bearing.  A linear architectural or structural element that cannot be expressed more specifically as either a beam or column.</rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/11GXc0qV4HuO00025QrE$V</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Member</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Member-MULLION">
+  <rdfs:subClassOf rdf:resource="#Member"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcMemberEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/2H6TZXz1vEFOlOdhLv3CD7</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mullion</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Member-PLATE">
+  <rdfs:subClassOf rdf:resource="#Member"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcMemberEnumType"/>
+  <rdfs:comment xml:lang="en">A planar and often flat part with constant thickness. May carry loads between or beyond points of support, or provide stiffening. </rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/3zdC5dewn4ROXxRERahlnc</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Plate</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Member-POST">
+  <rdfs:subClassOf rdf:resource="#Member"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcMemberEnumType"/>
+  <rdfs:comment xml:lang="en">a linear member (usually used vertically) within a roof structure to support purlins</rdfs:comment>
+  <rdfs:comment xml:lang="en-gb">a linear member (usually used vertically) within a roof structure to support purlins</rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/3pLJTABEHCJeV4uMg1OJxY</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Post</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Member-PURLIN">
+  <rdfs:subClassOf rdf:resource="#Member"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcMemberEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/2ClC__ZBT6lgGn9bEtyKAq</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Purlin</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Member-RAFTER">
+  <rdfs:subClassOf rdf:resource="#Member"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcMemberEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/14MOjpDn1DYfI9uAgvn_Mm</rdfs:comment>
+  <rdfs:comment xml:lang="nb-no">sperre</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rafter</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Member-STRINGER">
+  <rdfs:subClassOf rdf:resource="#Member"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcMemberEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/31phWfaoDEDwTkU1_cQp7G</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stringer</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Member-STRUT">
+  <rdfs:subClassOf rdf:resource="#Member"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcMemberEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/0F1OouH1f9rPC$dWa4xYLb</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Strut</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Member-STUD">
+  <rdfs:subClassOf rdf:resource="#Member"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcMemberEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/14DS4URKP2au1B2s5ghLFp</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stud</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Pile">
+  <rdfs:subClassOf rdf:resource="#BuildingElement"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcPile"/>
+  <rdfs:comment xml:lang="en">A vertical structural member of timber, concrete, or steel, driven into the earth as a foundation or support for a structure for the transfer of actions. </rdfs:comment>
+  <rdfs:comment xml:lang="nb-no">En stråle av tømmer, betong eller stål, drevet ned i jorden som fundament eller støtte til en struktur.</rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/3vHXEAoT0Hsm00051Mm008</rdfs:comment>
+  <rdfs:comment xml:lang="nb-no">slankt bærende element i grunnen for overføring av laster. I denne europeiske standarden er slankhetsforholdet ikke begrenset</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pile</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Pile-BORED">
+  <rdfs:subClassOf rdf:resource="#Pile"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcPileEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/1INEbwMtrBy9rKhAuvXYmq</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bored Pile</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Pile-COHESION">
+  <rdfs:subClassOf rdf:resource="#Pile"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcPileEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/3xzAjG3Uv5qeCDRxYCXd4d</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cohesion Pile</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Pile-DRIVEN">
+  <rdfs:subClassOf rdf:resource="#Pile"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcPileEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/2Qg5YD6TD299EHtweCaOOy</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Driven Pile</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Pile-FRICTION">
+  <rdfs:subClassOf rdf:resource="#Pile"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcPileEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/3LgOubO_D3EhcElUZP9dMe</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Friction Pile</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Pile-JETGROUTING">
+  <rdfs:subClassOf rdf:resource="#Pile"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcPileEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/1tI0jqBjHEmADWyrGGYig6</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jet Grouting Pile</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Pile-SUPPORT">
+  <rdfs:subClassOf rdf:resource="#Pile"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcPileEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/3qZud6iazFjOZ3wK3WoQch</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Support</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Plate">
+  <rdfs:subClassOf rdf:resource="#BuildingElement"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcPlate"/>
+  <rdfs:comment xml:lang="en">A planar and often flat part with constant thickness. May carry loads between or beyond points of support, or provide stiffening. </rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/3z14Y0qVCHuO00025QrE$V</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Plate</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Plate-CURTAIN_PANEL">
+  <rdfs:subClassOf rdf:resource="#Plate"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcPlateEnumType"/>
+  <rdfs:comment xml:lang="en">a planar element within a curtain wall, often consisting of a frame with fixed glazing</rdfs:comment>
+  <rdfs:comment xml:lang="en-gb">a planar element within a curtain wall, often consisting of a frame with fixed glazing</rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/2N7mbvPFL0QRlf$nLuQE0U</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Curtain Panel</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Plate-SHEET">
+  <rdfs:subClassOf rdf:resource="#Plate"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcPlateEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/2C4D8j05v51eRokWOWtlju</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sheet</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Railing">
+  <rdfs:subClassOf rdf:resource="#BuildingElement"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcRailing"/>
+  <rdfs:comment xml:lang="en">A frame assembly adjacent to human circulation spaces and at some space boundaries where it is used in line of walls or to compliment walls. Designed to aid humans, either as an optional physical support, or to prevent injury by falling.</rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/02irk0qVyHuO00025QrE$V</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Railing</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Railing-BALUSTRADE">
+  <rdfs:subClassOf rdf:resource="#Railing"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcRailingEnumType"/>
+  <rdfs:comment xml:lang="en">A balustrade is a separation construction alongside the edges of floors, roofs, stairs and ramps, protecting against falling into the deep.</rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/0ZHKicPyL9l8uyCir_Dsef</rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/30Ez0HE6XAHQh6wJkRK6T$</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Balustrade</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Railing-GUARDRAIL">
+  <rdfs:subClassOf rdf:resource="#Railing"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcRailingEnumType"/>
+  <rdfs:comment xml:lang="en">A frame assembly adjacent to human circulation spaces and at some space boundaries where it is used in line of walls or to compliment walls. Designed to aid humans, either as an optional physical support, or to prevent injury by falling.</rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/2804vLstn5DfaH_vxv53w3</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Guardrail</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Railing-HANDRAIL">
+  <rdfs:subClassOf rdf:resource="#Railing"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcRailingEnumType"/>
+  <rdfs:comment xml:lang="nb-no">Håndlister, typisk i korridorer</rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/3vHRZWoT0Hsm00051Mm008</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Handrail</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Ramp">
+  <rdfs:subClassOf rdf:resource="#BuildingElement"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcRamp"/>
+  <rdfs:comment xml:lang="en">A vertical passageway which provides a human circulation link between one floor level and another floor level at a different elevation. Normally does not include steps.</rdfs:comment>
+  <rdfs:comment xml:lang="nb-no">Rampe</rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/0kpjo0qVyHuO00025QrE$V</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ramp</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Ramp-HALF_TURN_RAMP">
+  <rdfs:subClassOf rdf:resource="#Ramp"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcRampEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/1hJB5FgjL4_v2TrvOBjmzz</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Half Turn Ramp</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Ramp-QUARTER_TURN_RAMP">
+  <rdfs:subClassOf rdf:resource="#Ramp"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcRampEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/1FZ7G8CAP2UxmW6fnuOOfQ</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Quarter Turn Ramp</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Ramp-SPIRAL_RAMP">
+  <rdfs:subClassOf rdf:resource="#Ramp"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcRampEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/2__YGgu4XCN9NmT3LhvE6V</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spiral Ramp</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Ramp-STRAIGHT_RUN_RAMP">
+  <rdfs:subClassOf rdf:resource="#Ramp"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcRampEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/1SYNqJ72H64g7EG2vm8VJu</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Straight Run Ramp</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Ramp-TWO_QUARTER_TURN_RAMP">
+  <rdfs:subClassOf rdf:resource="#Ramp"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcRampEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/2wUjACPhnDyAgFiGarLaek</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Two Quarter Turn Ramp</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Ramp-TWO_STRAIGHT_RUN_RAMP">
+  <rdfs:subClassOf rdf:resource="#Ramp"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcRampEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/2skPwOQSH1Ex7UR3SpDGbT</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Two Straight Run Ramp</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#RampFlight">
+  <rdfs:subClassOf rdf:resource="#BuildingElement"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcRampFlight"/>
+  <rdfs:comment xml:lang="en">A single inclined segment, or several inclined segments that are connected by a horizontal segment, referred to as a landing. </rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/1kbSG0qVyHuO00025QrE$V</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ramp Flight</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#RampFlight-SPIRAL">
+  <rdfs:subClassOf rdf:resource="#RampFlight"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcRampFlightEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/0CDsSbmyb4GA$0xajhCLYB</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spiral</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#RampFlight-STRAIGHT">
+  <rdfs:subClassOf rdf:resource="#RampFlight"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcRampFlightEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/0fyv31IoL8mwvU9TcZR2FC</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Straight</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#ReinforcingBar">
+  <rdfs:subClassOf rdf:resource="#ReinforcingElement"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcReinforcingBar"/>
+  <rdfs:comment xml:lang="en">a reinforcing bar is usually made of steel with manufactured deformations in the surface, and used in concrete and masonry construction to provide additional strength. a single instance of this class may represent one or many of actual rebars, for example a row of rebars.</rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/1zlbN6A$z4r8Er6nWNbSMZ</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reinforcing Bar</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#ReinforcingElement">
+  <rdfs:subClassOf rdf:resource="#ElementComponent"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcReinforcingElement"/>
+  <rdfs:comment xml:lang="en">a reinforcing element represents bars, wires, strands, meshes, tendons, and other components embedded in concrete in such a manner that the reinforcement and the concrete act together in resisting forces.</rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/1aiY$$Wf98m8a5cp3Hzgdu</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reinforcing Element</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#ReinforcingBar-ANCHORING">
+  <rdfs:subClassOf rdf:resource="#ReinforcingBar"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcReinforcingBarEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/3X1mNZzk542ez6g92TTVdH</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anchoring</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#ReinforcingBar-EDGE">
+  <rdfs:subClassOf rdf:resource="#ReinforcingBar"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcReinforcingBarEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/0tRGNh1sv19OvGghikeGYQ</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Edge</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#ReinforcingBar-LIGATURE">
+  <rdfs:subClassOf rdf:resource="#ReinforcingBar"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcReinforcingBarEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/09DzOB3qT10AwjdzYLo1LA</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ligature</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#ReinforcingBar-MAIN">
+  <rdfs:subClassOf rdf:resource="#ReinforcingBar"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcReinforcingBarEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/0ZDnwDkMT9fhTxjjLnIpAX</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Main</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#ReinforcingBar-PUNCHING">
+  <rdfs:subClassOf rdf:resource="#ReinforcingBar"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcReinforcingBarEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/1RO$_IvNP7eQABna$VzMm_</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Punching</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#ReinforcingBar-RING">
+  <rdfs:subClassOf rdf:resource="#ReinforcingBar"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcReinforcingBarEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/2zA8DFnW5B8hiBjIlXcktx</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ring</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#ReinforcingBar-SHEAR">
+  <rdfs:subClassOf rdf:resource="#ReinforcingBar"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcReinforcingBarEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/220Wv8D4n11hjTIo_DzfBR</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shear</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#ReinforcingBar-STUD">
+  <rdfs:subClassOf rdf:resource="#ReinforcingBar"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcReinforcingBarEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/3cWXnrQEvAfRCh9LjK26$R</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stud</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#ReinforcingMesh">
+  <rdfs:subClassOf rdf:resource="#ReinforcingElement"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcReinforcingMesh"/>
+  <rdfs:comment xml:lang="en">a reinforcing mesh is a series of longitudinal and transverse wires or bars of various gauges, arranged at right angles to each other and welded at all points of intersection; usually used for concrete slab reinforcement. it is also known as welded wire fabric. in scope are plane meshes as well as bent meshes.</rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/3R4n2h6wn67Q4clocrGT7J</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reinforcing Mesh</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Roof">
+  <rdfs:subClassOf rdf:resource="#BuildingElement"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcRoof"/>
+  <rdfs:comment xml:lang="en">A covering of the top part of a building. Protects the building against the effects of weather.</rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/2Iyg00qW4HuO00025QrE$V</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Roof</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Roof-BARREL_ROOF">
+  <rdfs:subClassOf rdf:resource="#Roof"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcRoofEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/172RLdein1b8WIbTtDLVbc</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Barrel Roof</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Roof-BUTTERFLY_ROOF">
+  <rdfs:subClassOf rdf:resource="#Roof"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcRoofEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/2W6yLK2r968h2TWfGC2xWu</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Butterfly Roof</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Roof-DOME_ROOF">
+  <rdfs:subClassOf rdf:resource="#Roof"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcRoofEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/3UcE2aJPP4ewOoRn29unfZ</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dome Roof</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Roof-FLAT_ROOF">
+  <rdfs:subClassOf rdf:resource="#Roof"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcRoofEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/3IeKrtrMz2SQN7qpJt82e5</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Flat Roof</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Roof-FREEFORM">
+  <rdfs:subClassOf rdf:resource="#Roof"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcRoofEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/2KVHvK7iXAEfKlD5hGIFEc</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Free Form Roof</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Roof-GABLE_ROOF">
+  <rdfs:subClassOf rdf:resource="#Roof"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcRoofEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/0gHJNRNhz6LOTHVbnW$nEj</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gable Roof</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Roof-GAMBREL_ROOF">
+  <rdfs:subClassOf rdf:resource="#Roof"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcRoofEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/2BnDhKP1HF3vXxnwqccewa</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gambrel Roof</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Roof-HIPPED_GABLE_ROOF">
+  <rdfs:subClassOf rdf:resource="#Roof"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcRoofEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/3Su_2ncLX1Oes0r3fNr4uE</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hipped Gable Roof</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Roof-HIP_ROOF">
+  <rdfs:subClassOf rdf:resource="#Roof"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcRoofEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/0waejMcyT3zwP6nRClvfSx</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hip Roof</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Roof-MANSARD_ROOF">
+  <rdfs:subClassOf rdf:resource="#Roof"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcRoofEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/1hB_MPg3j35vRsm_vutjD2</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mansard Roof</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Roof-PAVILION_ROOF">
+  <rdfs:subClassOf rdf:resource="#Roof"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcRoofEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/11Ltv09Eb7lRJW184fZ9gF</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pavilion Roof</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Roof-RAINBOW_ROOF">
+  <rdfs:subClassOf rdf:resource="#Roof"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcRoofEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/1MnaPoqUb0L8PGqS6yHzbq</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rainbow Roof</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Roof-SHED_ROOF">
+  <rdfs:subClassOf rdf:resource="#Roof"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcRoofEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/3GsCyHvinDMPWmecHluOEq</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shed Roof</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#ShadingDevice">
+  <rdfs:subClassOf rdf:resource="#BuildingElement"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcShadingDevice"/>
+  <rdfs:comment xml:lang="en">Purpose built devices to protect from the sunlight, from natural light, or screening them from view. Shading devices can form part of the facade or can be mounted inside the building, they can be fixed or operable.
+</rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/11vQg0qWSHuO00025QrE$V</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shading Device</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#ShadingDevice-AWNING">
+  <rdfs:subClassOf rdf:resource="#ShadingDevice"/>
+  <rdfs:comment xml:lang="en">a rooflike shelter of canvas or other material extending over a doorway, from the top of a window, over a deck, etc., in order to provide protection, as from the sun</rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/3NoPxSKmL7yQEzPT8cmssT</rdfs:comment>
+  <rdfs:comment xml:lang="en">product made of fabric/material, located externally, above, in front of, or within an opening and extending in a horizontal and/or sloping and/or vertical plane</rdfs:comment>
+  <rdfs:comment xml:lang="nb-no">produkt laget av stoff/materiale som plasseres utvendig over, foran eller i en åpning, og som stikker ut i et horisontalt og/eller skrånende og/eller vertikalt plan</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Awning</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#ShadingDevice-JALOUSIE">
+  <rdfs:subClassOf rdf:resource="#ShadingDevice"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcShadingDeviceEnumType"/>
+  <rdfs:comment xml:lang="nb-no">Solavskjerming, Persienner</rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/1$w9Dw6W9DJvD2GfuZFMSR</rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/3vHLsWoT0Hsm00051Mm008</rdfs:comment>
+  <rdfs:comment xml:lang="en">product consisting of horizontal slats which can be tilted. it may be retracted by raising and stacking the slats.</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jalousie</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#ShadingDevice-SHUTTER">
+  <rdfs:subClassOf rdf:resource="#ShadingDevice"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcShadingDeviceEnumType"/>
+  <rdfs:comment xml:lang="en">An artefact which is a part of an assembly that can be moved from a position where it permits contact, to a position where it becomes a part of the enclosure or partition shielding the fixed contacts.                </rdfs:comment>
+  <rdfs:comment xml:lang="en">Movable component installed in an opening or duct to form a barrier for security purposes; used to control the passage of heat or light or to delay the spread of fire, smoke or gases.</rdfs:comment>
+  <rdfs:comment xml:lang="nb-no">Solavskjerming, Solgardin</rdfs:comment>
+  <rdfs:comment xml:lang="en">Sun-shading device</rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/0w_lVI8P10c9rjT$RsNEVr</rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/27f2fkTV50YwB1IZgMURLa</rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/3vHUzKoT0Hsm00051Mm008</rdfs:comment>
+  <rdfs:comment xml:lang="en">product installed either internally or externally to provide additional covering and/or protection to an opening</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shutter</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Slab">
+  <rdfs:subClassOf rdf:resource="#BuildingElement"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcSlab"/>
+  <rdfs:comment xml:lang="en">A component of the construction that normally encloses a space vertically. May provide the lower support (floor) or upper construction (roof slab) in any space in a building.
+Only the core or constructional part of this construction is considered to be a slab. The upper finish (flooring, roofing) and the lower finish (ceiling, suspended ceiling) are considered to be coverings. </rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/3pXDk0qWSHuO00025QrE$V</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Slab</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Slab-BASESLAB">
+  <rdfs:subClassOf rdf:resource="#Slab"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcSlabEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/1hBroEIeL9neS3mSSGZiyC</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Base Slab</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Slab-FLOOR">
+  <rdfs:subClassOf rdf:resource="#Slab"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcSlabEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/0jBALpJIv7vvlWkbd9HdCx</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Floor</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Slab-LANDING">
+  <rdfs:subClassOf rdf:resource="#Slab"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcSlabEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/3tQbZvvrfA8OUjU1kc2rUZ</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Landing</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Slab-ROOF">
+  <rdfs:subClassOf rdf:resource="#Slab"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcSlabEnumType"/>
+  <rdfs:comment xml:lang="en">A covering of the top part of a building. Protects the building against the effects of weather.</rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/3Hvwx39_rCaRS49F4qRGBb</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Roof</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Stair">
+  <rdfs:subClassOf rdf:resource="#BuildingElement"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcStair"/>
+  <rdfs:comment xml:lang="en">A vertical passageway allowing occupants to walk (step) from one floor level to another floor level at a different elevation. May include a landing as an intermediate floor slab.</rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/3DhWM0qWmHuO00025QrE$V</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stair</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Stair-CURVED_RUN_STAIR">
+  <rdfs:subClassOf rdf:resource="#Stair"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcStairEnumType"/>
+  <rdfs:comment xml:lang="en">a stair extending from one level to another without turns or winders. the stair is consisting of one curved flight.</rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/1lkxIX8Gj23Bi50H2qpZB9</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Curved Run Stair</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Stair-DOUBLE_RETURN_STAIR">
+  <rdfs:subClassOf rdf:resource="#Stair"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcStairEnumType"/>
+  <rdfs:comment xml:lang="en">a stair having one straight flight to a wide quarterspace landing, and two side flights from that landing into opposite directions. the stair is making a 90° turn. the direction of traffic is determined by the walking line.</rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/3NNCQTceL7Uf8ZhJf40gs9</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Double Return Stair</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Stair-HALF_TURN_STAIR">
+  <rdfs:subClassOf rdf:resource="#Stair"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcStairEnumType"/>
+  <rdfs:comment xml:lang="en">a stair making a 180° turn, consisting of two straight flights connected by a halfspace landing. the orientation of the turn is determined by the walking line.</rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/3YmaH1onP90PM6kEWHUjFv</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Half Turn Stair</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Stair-HALF_WINDING_STAIR">
+  <rdfs:subClassOf rdf:resource="#Stair"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcStairEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/0Vw081Hfz1AQne1V5CsfUA</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Half Winding Stair</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Stair-QUARTER_TURN_STAIR">
+  <rdfs:subClassOf rdf:resource="#Stair"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcStairEnumType"/>
+  <rdfs:comment xml:lang="en">a stair making a 90° turn, consisting of two straight flights connected by a quarterspace landing. the direction of the turn is determined by the walking line.</rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/1IEbbDJDHAFQb9SZweXH3x</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Quarter Turn Stair</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Stair-QUARTER_WINDING_STAIR">
+  <rdfs:subClassOf rdf:resource="#Stair"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcStairEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/3PzSNWl5T1EgMXH$Tn6uuQ</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Quarter Winding Stair</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Stair-SPIRAL_STAIR">
+  <rdfs:subClassOf rdf:resource="#Stair"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcStairEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/0UwQe$TXP47AhE5k0mZzCe</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spiral Stair</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Stair-STRAIGHT_RUN_STAIR">
+  <rdfs:subClassOf rdf:resource="#Stair"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcStairEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/3p4WSJmK96Oe6HXE$jmWWy</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Straight Run Stair</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Stair-THREE_QUARTER_TURN_STAIR">
+  <rdfs:subClassOf rdf:resource="#Stair"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcStairEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/2jTG3NRNHCyhbsMbwK38v5</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Three Quarter Turn Stair</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Stair-THREE_QUARTER_WINDING_STAIR">
+  <rdfs:subClassOf rdf:resource="#Stair"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcStairEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/0rPjGYk_LFnOayZFsJg3tr</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Three Quarter Winding Stair</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Stair-TWO_CURVED_RUN_STAIR">
+  <rdfs:subClassOf rdf:resource="#Stair"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcStairEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/0cSo1dkGL8NunRzp$sQsTc</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Two Curved Run Stair</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Stair-TWO_QUARTER_TURN_STAIR">
+  <rdfs:subClassOf rdf:resource="#Stair"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcStairEnumType"/>
+  <rdfs:comment xml:lang="en">a stair making a 180° turn, consisting of three straight flights connected by two quarterspace landings. the direction of the turns is determined by the walking line</rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/0mW4DtraD3SA57fcejW4cS</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Two Quarter Turn Stair</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Stair-TWO_QUARTER_WINDING_STAIR">
+  <rdfs:subClassOf rdf:resource="#Stair"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcStairEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/3SSlfuJ_nA49lzIOhda6Xr</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Two Quarter Winding Stair</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Stair-TWO_STRAIGHT_RUN_STAIR">
+  <rdfs:subClassOf rdf:resource="#Stair"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcStairEnumType"/>
+  <rdfs:comment xml:lang="en">a straight stair consisting of two straight flights without turns but with one landing.</rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/3VuqGJNz160B87TSrFhrM4</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Two Straight Run Stair</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#StairFlight">
+  <rdfs:subClassOf rdf:resource="#BuildingElement"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcStairFlight"/>
+  <rdfs:comment xml:lang="en">An assembly of building components in a single "run" of stair steps (not interrupted by a landing).</rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/0pceq0qWqHuO00025QrE$V</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stair Flight</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#StairFlight-CURVED">
+  <rdfs:subClassOf rdf:resource="#StairFlight"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcStairFlightEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/2DeCDqEVHDjwFaGVpyNC89</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Curved</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#StairFlight-FREEFORM">
+  <rdfs:subClassOf rdf:resource="#StairFlight"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcStairFlightEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/0uFuIDRO1EZPmcL8pEkVU$</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Freeform</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#StairFlight-SPIRAL">
+  <rdfs:subClassOf rdf:resource="#StairFlight"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcStairFlightEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/1zj3DVJij6IBVuIqOLbi46</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spiral</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#StairFlight-STRAIGHT">
+  <rdfs:subClassOf rdf:resource="#StairFlight"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcStairFlightEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/247CeErMz16BZyRhwbAOdR</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Straight</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#StairFlight-WINDER">
+  <rdfs:subClassOf rdf:resource="#StairFlight"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcStairFlightEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/3XVLP1SZf8YQfshhp0Vjph</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Winder</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Tendon">
+  <rdfs:subClassOf rdf:resource="#ReinforcingElement"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcTendon"/>
+  <rdfs:comment xml:lang="en">a tendon is a steel element such as a wire, cable, bar, rod or strand used to impart prestress to concrete when the element is tensioned.</rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/0GEDRkhJ9DdQ2MRE_CaSCF</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tendon</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Tendon-BAR">
+  <rdfs:subClassOf rdf:resource="#Tendon"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcTendonEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/3seMZXSSH4YfQCPjOcaoZG</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bar</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Tendon-COATED">
+  <rdfs:subClassOf rdf:resource="#Tendon"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcTendonEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/1WLzEVaRD77A5KPd3$v9DB</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Coated</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Tendon-STRAND">
+  <rdfs:subClassOf rdf:resource="#Tendon"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcTendonEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/1d4UrJXi92ivdu3FflJ62n</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Strand</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Tendon-WIRE">
+  <rdfs:subClassOf rdf:resource="#Tendon"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcTendonEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/1NCnQvMs9AaRqwexu7DofF</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wire</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#TendonAnchor">
+  <rdfs:subClassOf rdf:resource="#ReinforcingElement"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcTendonAnchor"/>
+  <rdfs:comment xml:lang="en">a tendon anchor is the end connection for tendons in prestressed or posttensioned concrete.</rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/0Z116ntsH6xBFYGYsNg38f</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tendon Anchor</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#TendonAnchor-COUPLER">
+  <rdfs:subClassOf rdf:resource="#TendonAnchor"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcTendonAnchorEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/2yrjArQAnBL9EdTqIc7Uv7</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Coupler</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#TendonAnchor-FIXED_END">
+  <rdfs:subClassOf rdf:resource="#TendonAnchor"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcTendonAnchorEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/133YYoKAv8mBxccTJtzWju</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fixed End</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#TendonAnchor-TENSIONING_END">
+  <rdfs:subClassOf rdf:resource="#TendonAnchor"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcTendonAnchorEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/2Bp8P7qwn1Hg1BaRHyCQP4</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tensioning End</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#TransportElement">
+  <rdfs:subClassOf rdf:resource="https://schema.org/Product"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcTransportElement"/>
+  <rdfs:comment xml:lang="en">A generalization of all transport related objects that move people, animals or goods within a building or building complex. Include elevator (lift), escalator, moving walkway, etc.</rdfs:comment>
+  <rdfs:comment xml:lang="en">An element type defined by commonly shared information for occurrences of transport elements. The set of shared information may include:
+common properties within shared property sets
+common material information
+common shape representations
+It is used to define a transport element specification (i.e. the specific product information that is common to all occurrences of that beam type). </rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/3ZSVc0qX4HuO00025QrE$V</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Transport Element</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#TransportElement-CRANEWAY">
+  <rdfs:subClassOf rdf:resource="#TransportElement"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcTransportElementEnumType"/>
+  <rdfs:comment xml:lang="en">An artefact for raising, shifting and lowering heavy weights by means of a projecting swinging arm or with hoisting mechanism supported on an overhead track.        </rdfs:comment>
+  <rdfs:comment xml:lang="en">a crane way system, normally including the crane rails, fasteners and the crane. it is primarily used to move heavy goods in a factory or other industry buildings</rdfs:comment>
+  <rdfs:comment xml:lang="en-gb">a crane way system, normally including the crane rails, fasteners and the crane. it is primarily used to move heavy goods in a factory or other industry buildings</rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/087V4aTMPA09OItHDUip4G</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Craneway</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#TransportElement-ELEVATOR">
+  <rdfs:subClassOf rdf:resource="#TransportElement"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcTransportElementEnumType"/>
+  <rdfs:comment xml:lang="en">a permanent lifting equipment serving defined landing levels, comprising a car, whose dimensions and means of construction clearly permit the access of persons; running at least partially between rigid vertical guides or guides whose inclination to the ve</rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/2qanav0WDASA8V5to62fCx</rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/3vHX1_oT0Hsm00051Mm008</rdfs:comment>
+  <rdfs:comment xml:lang="nb-no">permanent løfteutstyr som betjener definerte etasjenivåer, og som består av en stol hvis dimensjoner og konstruksjonsmåte klart gir adgang for personer, og som minst delvis beveger seg mellom stive, vertikale føringsskinner eller føringer hvor hellingen f</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Elevator</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#TransportElement-ESCALATOR">
+  <rdfs:subClassOf rdf:resource="#TransportElement"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcTransportElementEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/377eo0WJOHu000025QrE$V</rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/3vHZncoT0Hsm00051Mm008</rdfs:comment>
+  <rdfs:comment xml:lang="en">power-driven, inclined, continuous moving stairway used for raising or lowering persons in which the user carrying surface (e.g. steps) remains horizontal</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Escalator</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#TransportElement-LIFTINGGEAR">
+  <rdfs:subClassOf rdf:resource="#TransportElement"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcTransportElementEnumType"/>
+  <rdfs:comment xml:lang="en">a device used for lifting or lowering heavy goods. It may be manually operated or electrically or pneumatically driven</rdfs:comment>
+  <rdfs:comment xml:lang="en-gb">a device used for lifting or lowering heavy goods. It may be manually operated or electrically or pneumatically driven</rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/3qsVNaK3r6Uw2tccQdpTmo</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lifting Gear</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#TransportElement-MOVINGWALKWAY">
+  <rdfs:subClassOf rdf:resource="#TransportElement"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcTransportElementEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/0Fn7lcsC5As81fnfma0hsy</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Moving Walkway</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#VibrationIsolator">
+  <rdfs:subClassOf rdf:resource="#ElementComponent"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcVibrationIsolator"/>
+  <rdfs:comment xml:lang="en">A device used to minimize the effects of vibration transmissibility in a building.</rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/0Oy60xvFT7TO70hyDzhWWZ</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vibration Isolator</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#VibrationIsolator-COMPRESSION">
+  <rdfs:subClassOf rdf:resource="#VibrationIsolator"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcVibrationIsolatorEnumType"/>
+  <rdfs:comment xml:lang="en">compression type vibration isolator</rdfs:comment>
+  <rdfs:comment xml:lang="en-gb">compression type vibration isolator</rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/0EwSGR8PX1z9zHS_KHBRcA</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Compression-based vibration isolator</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#VibrationIsolator-SPRING">
+  <rdfs:subClassOf rdf:resource="#VibrationIsolator"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcVibrationIsolatorEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/3cKim0GJf3mxz7EqVVfQ8u</rdfs:comment>
+  <rdfs:comment xml:lang="en">spring type vibration isolator</rdfs:comment>
+  <rdfs:comment xml:lang="en-gb">spring type vibration isolator</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spring</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Wall">
+  <rdfs:subClassOf rdf:resource="#BuildingElement"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcWall"/>
+  <rdfs:comment xml:lang="en">A vertical construction that bounds or subdivides spaces. Usually vertical, or nearly vertical, planar elements, often designed to bear structural loads. However not required to be load bearing.</rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/2Xuqs0qXKHuO00025QrE$V</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wall</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Wall-ELEMENTEDWALL">
+  <rdfs:subClassOf rdf:resource="#Wall"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcWallEnumType"/>
+  <rdfs:comment xml:lang="en">a stud wall framed with studs and faced with sheetings, sidings, wallboard, or plasterwork</rdfs:comment>
+  <rdfs:comment xml:lang="en-gb">a stud wall framed with studs and faced with sheetings, sidings, wallboard, or plasterwork</rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/0sVBQjaqvEcAVsdRJorFkQ</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Elemented Wall</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Wall-MOVABLE">
+  <rdfs:subClassOf rdf:resource="#Wall"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcWallEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/2nSQnTH_18RB$MO5daYxD0</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Movable Wall</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Wall-PARAPET">
+  <rdfs:subClassOf rdf:resource="#Wall"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcWallEnumType"/>
+  <rdfs:comment xml:lang="nb-no">Parapet/brystning
+Opphøyet kant som stikker opp over tak</rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/1uS$40WJmHu000025QrE$V</rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/2BlEUUV2L2BBUdnPO3PtnQ</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Parapet Wall</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Wall-PARTITIONING">
+  <rdfs:subClassOf rdf:resource="#Wall"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcWallEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/3DBpG2jff4GAXiQp8trskt</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Partitioning Wall</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Wall-PLUMBINGWALL">
+  <rdfs:subClassOf rdf:resource="#Wall"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcWallEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/1YFt0DFB99uxbJnz4oFiew</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Plumbing Wall</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Wall-POLYGONAL">
+  <rdfs:subClassOf rdf:resource="#Wall"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcWallEnumType"/>
+  <rdfs:comment xml:lang="en">a polygonal wall, extruded vertically, where the wall thickness varies along the wall path</rdfs:comment>
+  <rdfs:comment xml:lang="en-gb">a polygonal wall, extruded vertically, where the wall thickness varies along the wall path</rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/0cJEMJHYj6Hh7Q1xNPsiIf</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Polygonal Wall</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Wall-SHEAR">
+  <rdfs:subClassOf rdf:resource="#Wall"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcWallEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/0MAk1miOTAJQpI0VGyMnjS</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shear Wall</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Wall-SOLIDWALL">
+  <rdfs:subClassOf rdf:resource="#Wall"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcWallEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/2J1xt_ADz7heqvTyh5YGEM</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Solid Wall</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Wall-STANDARD">
+  <rdfs:subClassOf rdf:resource="#Wall"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcWallEnumType"/>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/2HWHt8Yiz4m9UzhlqVFLeO</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Standard Wall</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#WallElementedCase">
+  <rdfs:subClassOf rdf:resource="#Wall"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcWallElementedCase"/>
+  <rdfs:comment xml:lang="en">A wall with certain constraints for the provision of its components.</rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/2dG9W0qXKHuO00025QrE$V</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Elemented Wall Case</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Window">
+  <rdfs:subClassOf rdf:resource="#BuildingElement"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcWindow"/>
+  <rdfs:comment xml:lang="pt-br">Abertura destinada a iluminar e ventilar os ambientes internos, além de facilitar a visão do exterior.</rdfs:comment>
+  <rdfs:comment xml:lang="de-de">Bauteil zum Schließen einer Öffnung in einer Wand oder Satteldach, das Licht durchlassen und Belüftung ermöglichen kann</rdfs:comment>
+  <rdfs:comment xml:lang="en">building component for closing an opening in a wall or pitched roof that will admit light and may provide ventilation</rdfs:comment>
+  <rdfs:comment xml:lang="en-gb">building component for closing an opening in a wall or pitched roof that will admit light and may provide ventilation</rdfs:comment>
+  <rdfs:comment xml:lang="sv-se">byggelement som används för att stänga en öppning i en vägg eller ett sadeltak som kan släppa in ljus och bidra med ventilation</rdfs:comment>
+  <rdfs:comment xml:lang="it-it">componente costruttivo atto a chiudere un'apertura in un muro o in un tetto a spiovente che ammetta la luce e possa fornire ventilazione</rdfs:comment>
+  <rdfs:comment xml:lang="es-es">componente de construcción para cerrar una abertura en una pared o techo a dos aguas que deja pasar la luz y puede proporcionar ventilación</rdfs:comment>
+  <rdfs:comment xml:lang="en">construction for closing a vertical or near-vertical opening in a wall or pitched roof which will admit light and may provide ventilation. Often a pane of glass framed and mounted to permit opening and closing</rdfs:comment>
+  <rdfs:comment xml:lang="en-gb">construction for closing a vertical or near-vertical opening in a wall or pitched roof which will admit light and may provide ventilation. Often a pane of glass framed and mounted to permit opening and closing</rdfs:comment>
+  <rdfs:comment xml:lang="nn-no">ein konstruksjon som står i ei opning som i ein vegg eller tak og som normalt er dekt av glas, med det føremålet å sleppa inn lys og luft. | konstruksjon for *lukking av ein vertikal eller nesten vertikal opning i ein vegg eller eit skråtak som skal sleppa igjennom lys kan gje ventilasjon. Ofte ei glasrute *innrammet og montert for å gjera muleg opning og lukking</rdfs:comment>
+  <rdfs:comment xml:lang="pl-pl">element budynku służący do zamykania i otwierania, osadzony w ścianie lub w dachu dwuspadowym, przepuszczający światło i mogący zapewniać wentylację</rdfs:comment>
+  <rdfs:comment xml:lang="nb-no">en konstruksjon som står i en åpning som i en vegg eller tak og som normalt er dekket av glass, med det formål å slippe inn lys og luft.</rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/3vHUaooT0Hsm00051Mm008</rdfs:comment>
+  <rdfs:comment xml:lang="nb-no">konstruksjon for lukking av en vertikal eller nesten vertikal åpning i en vegg eller et skråtak som skal slippe igjennom lys kan gi ventilasjon. Ofte en glassrute innrammet og montert for å muliggjøre åpning og lukking</rdfs:comment>
+  <rdfs:comment xml:lang="dk-dk">konstruktion til lukning af en lodret eller næsten lodret åbning i en mur eller skråt tag, der lader lys trænge igennem og kan muliggøre ventilation. Ofte en rude i en karm og monteret, så den kan åbnes og lukkes</rdfs:comment>
+  <rdfs:comment xml:lang="fi-fi">seinä- tai kattoaukon sulkeva, valoa läpipäästävä rakenneosa varustettuna mahdollisin ilmanvaihto-ominaisuuksin</rdfs:comment>
+  <rdfs:comment xml:lang="fr-fr">une construction destinée à fermer une ouverture verticale ou quasi-verticale dans un mur ou un toit en pente qui laissera passer la lumière et pourra fournir une ventilation. souvent constituée d'un panneau vitré monté sur un châssis permettant son ouverture et sa fermeture.</rdfs:comment>
+  <rdfs:comment xml:lang="bg-bg">строителен компонент за затваряне на отвор в стена или скатен покрив, който служи за осветяване и евентуално за проветряване</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Window</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Window-LIGHTDOME">
+  <rdfs:subClassOf rdf:resource="#Window"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcWindowEnumType"/>
+  <rdfs:comment xml:lang="en">a special window that lies horizonally in a roof slab opening</rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/3aXmro5wX3FeEqYU7Y7w5X</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Light dome</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Window-SKYLIGHT">
+  <rdfs:subClassOf rdf:resource="#Window"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcWindowEnumType"/>
+  <rdfs:comment xml:lang="nb-no">Overlys</rdfs:comment>
+  <rdfs:comment xml:lang="en">construction for closing an opening in a flat roof or low pitched roof, intended primarily for lighting and consisting of a frame and glazing</rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/1irgDncIrAVQwjja3JEbnb</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Skylight</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Window-WINDOW">
+  <rdfs:subClassOf rdf:resource="#Window"/>
+  <rdfs:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcWindowEnumType"/>
+  <rdfs:comment xml:lang="ifc-2x4">A building element that is predominately used to provide natural light and fresh air. It includes vertical opening but also horizontal opening such as skylights or light domes. It includes constructions with swinging, pivoting, sliding, or revolving panels and fixed panels. A window consists of a lining and one or several panels.
+NOTE  Definition according to ISO 6707-1
+Construction for closing a vertical or near vertical opening in a wall or pitched roof that will admit light and may admit fresh air.</rdfs:comment>
+  <rdfs:comment xml:lang="pt-br">Abertura destinada a iluminar e ventilar os ambientes internos, além de facilitar a visão do exterior.</rdfs:comment>
+  <rdfs:comment xml:lang="de-de">Bauteil zum Schließen einer Öffnung in einer Wand oder Satteldach, das Licht durchlassen und Belüftung ermöglichen kann</rdfs:comment>
+  <rdfs:comment xml:lang="nl-nl">Een raam is een constructie met een scheidingsfunctie en een lichttoetredingsfunctie.</rdfs:comment>
+  <rdfs:comment xml:lang="en">building component for closing an opening in a wall or pitched roof that will admit light and may provide ventilation</rdfs:comment>
+  <rdfs:comment xml:lang="en-gb">building component for closing an opening in a wall or pitched roof that will admit light and may provide ventilation</rdfs:comment>
+  <rdfs:comment xml:lang="sv-se">byggelement som används för att stänga en öppning i en vägg eller ett sadeltak som kan släppa in ljus och bidra med ventilation</rdfs:comment>
+  <rdfs:comment xml:lang="it-it">componente costruttivo atto a chiudere un'apertura in un muro o in un tetto a spiovente che ammetta la luce e possa fornire ventilazione</rdfs:comment>
+  <rdfs:comment xml:lang="es-es">componente de construcción para cerrar una abertura en una pared o techo a dos aguas que deja pasar la luz y puede proporcionar ventilación</rdfs:comment>
+  <rdfs:comment xml:lang="en">construction for closing a vertical or near-vertical opening in a wall or pitched roof which will admit light and may provide ventilation. Often a pane of glass framed and mounted to permit opening and closing</rdfs:comment>
+  <rdfs:comment xml:lang="en-gb">construction for closing a vertical or near-vertical opening in a wall or pitched roof which will admit light and may provide ventilation. Often a pane of glass framed and mounted to permit opening and closing</rdfs:comment>
+  <rdfs:comment xml:lang="nn-no">ein konstruksjon som står i ei opning som i ein vegg eller tak og som normalt er dekt av glas, med det føremålet å sleppa inn lys og luft. | konstruksjon for *lukking av ein vertikal eller nesten vertikal opning i ein vegg eller eit skråtak som skal sleppa igjennom lys kan gje ventilasjon. Ofte ei glasrute *innrammet og montert for å gjera muleg opning og lukking</rdfs:comment>
+  <rdfs:comment xml:lang="pl-pl">element budynku służący do zamykania i otwierania, osadzony w ścianie lub w dachu dwuspadowym, przepuszczający światło i mogący zapewniać wentylację</rdfs:comment>
+  <rdfs:comment xml:lang="nb-no">en konstruksjon som står i en åpning som i en vegg eller tak og som normalt er dekket av glass, med det formål å slippe inn lys og luft.</rdfs:comment>
+  <rdfs:comment xml:lang="en">http://bsdd.buildingsmart.org/#concept/details/3QkFVA4cD3YvP3Y3zVGFc3</rdfs:comment>
+  <rdfs:comment xml:lang="nb-no">konstruksjon for lukking av en vertikal eller nesten vertikal åpning i en vegg eller et skråtak som skal slippe igjennom lys kan gi ventilasjon. Ofte en glassrute innrammet og montert for å muliggjøre åpning og lukking</rdfs:comment>
+  <rdfs:comment xml:lang="dk-dk">konstruktion til lukning af en lodret eller næsten lodret åbning i en mur eller skråt tag, der lader lys trænge igennem og kan muliggøre ventilation. Ofte en rude i en karm og monteret, så den kan åbnes og lukkes</rdfs:comment>
+  <rdfs:comment xml:lang="sv-se">objekt för tillträde till utrymme för enbart ljus</rdfs:comment>
+  <rdfs:comment xml:lang="fi-fi">seinä- tai kattoaukon sulkeva, valoa läpipäästävä rakenneosa varustettuna mahdollisin ilmanvaihto-ominaisuuksin</rdfs:comment>
+  <rdfs:comment xml:lang="en">space access object for light entry only</rdfs:comment>
+  <rdfs:comment xml:lang="fr-fr">une construction destinée à fermer une ouverture verticale ou quasi-verticale dans un mur ou un toit en pente qui laissera passer la lumière et pourra fournir une ventilation. souvent constituée d'un panneau vitré monté sur un châssis permettant son ouverture et sa fermeture.</rdfs:comment>
+  <rdfs:comment xml:lang="bg-bg">строителен компонент за затваряне на отвор в стена или скатен покрив, който служи за осветяване и евентуално за проветряване</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Window</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="http://purl.org/vocommons/voaf#Vocabulary">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="#">
+  <rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
+</owl:NamedIndividual>
+
+<x_0.1:Person>
+  <x_0.1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pieter Pauwels</x_0.1:name>
+</x_0.1:Person>
+
+<x_0.1:Person>
+  <x_0.1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pieter Pauwels</x_0.1:name>
+</x_0.1:Person>
+
+<x_0.1:Person>
+  <x_0.1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pieter Pauwels</x_0.1:name>
+</x_0.1:Person>
+
+
+</rdf:RDF>
